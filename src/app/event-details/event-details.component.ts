@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class EventDetailsComponent {
  GuestArray = [
-  { name: 'Lisa Alvin' , designation: 'Co-founder', company: 'Meetup'},
-  { name: 'Jenny Pick' , designation: 'CEO', company: 'Zack'},
-  { name: 'Peter Scott' , designation: 'CEO', company: 'Scott Inc'},
+  { name: 'Lisa Alvin' , designation: 'Co-founder', company: 'Meetup' , image: 'assets/lisa.jpg'},
+  { name: 'Jenny Pick' , designation: 'CEO', company: 'Zack', image: 'assets/matt.jpg'},
+  { name: 'Peter Scott' , designation: 'CEO', company: 'Scott Inc' , image: 'assets/scott.jpg'},
  ]
 }
