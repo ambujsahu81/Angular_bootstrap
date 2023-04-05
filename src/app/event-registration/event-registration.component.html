@@ -7,34 +7,34 @@
     <div class="row mb-2">
       <div class="form-group col-md-6">
         <label for="first-name" class="text-muted">First Name</label>
-        <input type="text" class="form-control p-2" id="first-name" formControlName="firstName" placeholder="Enter your first name">
+        <input type="text" class="form-control p-2 mt-1" id="first-name" formControlName="firstName" placeholder="Enter your first name">
         <div *ngIf="shwFirstNameError && registrationForm.controls.firstName.invalid" class="text-danger"><small>This Field is Required.</small></div>       
       </div>
       <div class="form-group col-md-6">
         <label for="last-name" class="text-muted">Last Name</label>
-        <input type="text" class="form-control p-2" id="last-name" formControlName="lastName" placeholder="Enter your last name">
+        <input type="text" class="form-control p-2 mt-1" id="last-name" formControlName="lastName" placeholder="Enter your last name">
       </div>
     </div>
     <div class="row mb-2">
         <div class="form-group col-md-6">
           <label for="email" class="text-muted">Business Email</label>
-          <input type="text" class="form-control p-2" id="email" formControlName="email" placeholder="Enter your email">
+          <input type="text" class="form-control p-2 mt-1" id="email" formControlName="email" placeholder="Enter your email">
           <div *ngIf="shwEmailError && registrationForm.controls.email.invalid" class="text-danger"><small>The email is invalid.</small></div> 
         </div>
         <div class="form-group col-md-6">
           <label for="jobTitle" class="text-muted">Title</label>
-          <input type="text" class="form-control p-2" id="jobTitle" formControlName="jobTitle" placeholder="What is your job title?">
+          <input type="text" class="form-control p-2 mt-1" id="jobTitle" formControlName="jobTitle" placeholder="What is your job title?">
         </div>
       </div>
     
       <div class="row mb-2">
         <div class="form-group col-md-6">
           <label for="companyName" class="text-muted">Company Name</label>
-          <input type="text" class="form-control p-2" id="companyName" formControlName="companyName" placeholder="Where do you work?">
+          <input type="text" class="form-control p-2 mt-1" id="companyName" formControlName="companyName" placeholder="Where do you work?">
         </div>
         <div class="form-group col-md-6">
           <label for="companySize" class="text-muted">Company Size</label>
-          <select id="companySize" formControlName="companySize" class="form-control p-2">
+          <select id="companySize" formControlName="companySize" class="form-control p-2 mt-1">
             <option disabled selected>Select</option>
             <option>small</option>
             <option>medium</option>
@@ -45,11 +45,11 @@
 
     <div class="form-group mb-2">
       <label for="Message" class="text-muted">What are you hoping to learn about?</label>
-      <textarea class="form-control" id="Message" formControlName="message" rows="3" cols="30" placeholder="Message"></textarea>
+      <textarea class="form-control mt-1" id="Message" formControlName="message" rows="3" cols="30" placeholder="Message"></textarea>
     </div>
     <div class="form-group mb-2">
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="futureEmails" formControlName="futureEmails">
+        <input class="form-check-input mt-1" type="checkbox" id="futureEmails" formControlName="futureEmails">
         <label class="form-check-label" for="futureEmails" class="text-muted">
           I would like to receive emails about future webinars
         </label>
