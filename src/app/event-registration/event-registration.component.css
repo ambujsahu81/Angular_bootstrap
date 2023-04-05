@@ -1,0 +1,21 @@
+.form-control {
+    background-color: rgba(35,37,49,255);
+    border: 1px solid #464a56eb;
+    font-size: 0.9rem;
+    border-radius: 0.175rem;
+    color: #d2d7e4eb !important;
+}
+
+.form-control::placeholder {
+    color: #d2d7e4eb;
+    font-size: 0.6rem;
+  }
+
+.text-muted {
+    color: #d2d7e4eb !important;
+    font-size: 0.8rem;
+}
+
+.btn {
+    border-radius: 0.175rem;
+}

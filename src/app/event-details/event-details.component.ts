@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./event-details.component.css']
 })
 export class EventDetailsComponent {
-
+ GuestArray = [
+  { name: 'Lisa Alvin' , designation: 'Co-founder', company: 'Meetup'},
+  { name: 'Jenny Pick' , designation: 'CEO', company: 'Zack'},
+  { name: 'Peter Scott' , designation: 'CEO', company: 'Scott Inc'},
+ ]
 }
