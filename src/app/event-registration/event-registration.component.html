@@ -7,7 +7,12 @@
     <div class="row mb-2">
       <div class="form-group col-md-6">
         <label for="first-name" class="text-muted">First Name</label>
-        <input type="text" class="form-control p-2 mt-1" id="first-name" formControlName="firstName" placeholder="Enter your first name">
+        <input type="text"
+         class="form-control p-2 mt-1"
+         [ngClass]="{ 'border border-danger is-invalid' : shwFirstNameError && registrationForm.controls.firstName.invalid }"
+         id="first-name"
+         formControlName="firstName"
+         placeholder="Enter your first name">
         <div *ngIf="shwFirstNameError && registrationForm.controls.firstName.invalid" class="text-danger"><small>This Field is Required.</small></div>       
       </div>
       <div class="form-group col-md-6">
@@ -18,8 +23,15 @@
     <div class="row mb-2">
         <div class="form-group col-md-6">
           <label for="email" class="text-muted">Business Email</label>
-          <input type="text" class="form-control p-2 mt-1" id="email" formControlName="email" placeholder="Enter your email">
+          <input type="text"
+           class="form-control p-2 mt-1"
+           id="email"
+           [ngClass]="{ 'border border-danger is-invalid' : shwEmailError && (registrationForm.controls.email.invalid || !registrationForm.controls.email.value )}"
+           formControlName="email"
+           placeholder="Enter your email">
+           <div *ngIf="shwEmailError && !registrationForm.controls.email.value" class="text-danger"><small>This Field is Required.</small></div> 
           <div *ngIf="shwEmailError && registrationForm.controls.email.invalid" class="text-danger"><small>The email is invalid.</small></div> 
+
         </div>
         <div class="form-group col-md-6">
           <label for="jobTitle" class="text-muted">Title</label>
@@ -34,8 +46,8 @@
         </div>
         <div class="form-group col-md-6">
           <label for="companySize" class="text-muted">Company Size</label>
-          <select id="companySize" formControlName="companySize" class="form-control p-2 mt-1">
-            <option disabled selected>Select</option>
+          <select id="companySize" formControlName="companySize" class="form-select p-2 mt-1">
+            <option selected disabled value="">Select</option>
             <option>small</option>
             <option>medium</option>
             <option>large</option>

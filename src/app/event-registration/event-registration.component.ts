@@ -30,10 +30,24 @@ export class EventRegistrationComponent {
       let formData = JSON.stringify(this.registrationForm.value, null, 4)
       let message = `Hello ${this.registrationForm.value.firstName}, Thankyou, registration is successfully completed \n\n ${formData} `;
       alert(message);
-    } else if ( this.registrationForm.controls.firstName.invalid) {
+    } 
+    if ( this.registrationForm.controls.firstName.invalid) {
       this.shwFirstNameError = true;
-    } else if ( this.registrationForm.controls.email.invalid ) {
+    } else {
+      this.shwFirstNameError = false;
+    }
+
+    if ( this.registrationForm.controls.email.invalid ) {
+      this.shwEmailError = true; 
+    } 
+
+    if ( !this.registrationForm.controls.email.value ) {
       this.shwEmailError = true; 
     }  
+    
+    if ( !this.registrationForm.controls.email.invalid && !!this.registrationForm.controls.email.value ) {
+      this.shwEmailError = false; 
+    }
+    
   }
 }
