@@ -1,28 +1,28 @@
 <div class="pt-5 px-3">
-    <h6 class="lead"><small>SHARE</small></h6>
+    <h6 class="lead">SHARE</h6>
     <div class="d-flex flex-row">
         <div class="px-2 text-muted"><i class="bi bi-facebook"></i></div>
         <div class="px-2 text-muted"><i class="bi bi-twitter"></i></div>
         <div class="px-2 text-muted"><i class="bi bi-instagram"></i></div>
     </div>
 
-    <h6 class="mt-4 mb-4 lead"><small>GUESTS</small></h6>
+    <h6 class="mt-5 mb-3 lead">GUESTS</h6>
     <div *ngFor="let guest of GuestArray">
         <div class="d-flex flex-row mt-3">
             <img src="{{guest.image}}" alt="avatar" class="avatar">
             <div class="col px-2">
                 <div>{{guest.name}}</div>
-                <div class="text-muted"><small>{{guest.designation}}, {{guest.company}}</small></div>
+                <div class="text-muted">{{guest.designation}}, {{guest.company}}</div>
             </div>
         </div>
     </div>
 
-    <h6 class="mt-4 mb-4 lead"><small>HOSTED BY</small></h6>
+    <h6 class="mt-5 mb-3 lead">HOSTED BY</h6>
     <div class="d-flex flex-row mt-3">
         <img src="assets/josh.jpg" alt="avatar" class="avatar">
         <div class="col px-2">
             <div>Josh Jacob</div>
-            <div class="text-muted"><small>Educator, Web Media</small></div>
+            <div class="text-muted">Educator, Web Media</div>
         </div>
     </div>
 
