@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 
@@ -8,8 +8,7 @@ import { Validators } from '@angular/forms';
   styleUrls: ['./event-registration.component.css']
 })
 export class EventRegistrationComponent {
-  shwFirstNameError = false;
-  shwEmailError = false;
+
   registrationForm = this.fb.group({
     firstName: ['', Validators.required],
     lastName: [''],
@@ -23,31 +22,13 @@ export class EventRegistrationComponent {
 
   constructor(private fb: FormBuilder) { }
 
-  onSubmit() {
+  onSubmit() { 
     if (this.registrationForm.valid) {
-      this.shwEmailError = false;
-      this.shwFirstNameError = false;
       let formData = JSON.stringify(this.registrationForm.value, null, 4)
-      let message = `Hello ${this.registrationForm.value.firstName}, Thankyou, registration is successfully completed \n\n ${formData} `;
-      alert(message);
-    } 
-    if ( this.registrationForm.controls.firstName.invalid) {
-      this.shwFirstNameError = true;
-    } else {
-      this.shwFirstNameError = false;
+      alert(`Successfully registered. \n\n ${formData} `);
+      return;
     }
-
-    if ( this.registrationForm.controls.email.invalid ) {
-      this.shwEmailError = true; 
-    } 
-
-    if ( !this.registrationForm.controls.email.value ) {
-      this.shwEmailError = true; 
-    }  
-    
-    if ( !this.registrationForm.controls.email.invalid && !!this.registrationForm.controls.email.value ) {
-      this.shwEmailError = false; 
-    }
-    
+    this.registrationForm.markAllAsTouched();
   }
+  
 }

@@ -6,12 +6,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { EventRegistrationComponent } from './event-registration/event-registration.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
+import { ConfettiPageComponent } from './confetti-page/confetti-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventRegistrationComponent,
-    EventDetailsComponent
+    EventDetailsComponent,
+    ConfettiPageComponent
   ],
   imports: [
     BrowserModule,

@@ -9,11 +9,11 @@
         <label for="first-name" class="text-muted">First Name</label>
         <input type="text"
          class="form-control p-2 mt-1"
-         [ngClass]="{ 'border border-danger is-invalid' : shwFirstNameError && registrationForm.controls.firstName.invalid }"
+         [ngClass]="{ 'border border-danger is-invalid' : (registrationForm.controls.firstName.touched || registrationForm.controls.firstName.dirty)  && registrationForm.controls.firstName.invalid }"
          id="first-name"
          formControlName="firstName"
          placeholder="Enter your first name">
-        <div *ngIf="shwFirstNameError && registrationForm.controls.firstName.invalid" class="text-danger"><small>This Field is Required.</small></div>       
+        <div *ngIf="(registrationForm.controls.firstName.touched || registrationForm.controls.firstName.dirty) && registrationForm.controls.firstName.invalid" class="text-danger"><small>This Field is Required.</small></div>       
       </div>
       <div class="form-group col-md-6">
         <label for="last-name" class="text-muted">Last Name</label>
@@ -26,11 +26,11 @@
           <input type="text"
            class="form-control p-2 mt-1"
            id="email"
-           [ngClass]="{ 'border border-danger is-invalid' : shwEmailError && (registrationForm.controls.email.invalid || !registrationForm.controls.email.value )}"
+           [ngClass]="{ 'border border-danger is-invalid' : (registrationForm.controls.email.touched || registrationForm.controls.email.dirty) &&  (registrationForm.controls.email.invalid || !registrationForm.controls.email.value )}"
            formControlName="email"
            placeholder="Enter your email">
-           <div *ngIf="shwEmailError && !registrationForm.controls.email.value" class="text-danger"><small>This Field is Required.</small></div> 
-          <div *ngIf="shwEmailError && registrationForm.controls.email.invalid" class="text-danger"><small>The email is invalid.</small></div> 
+           <div *ngIf="(registrationForm.controls.email.touched || registrationForm.controls.email.dirty) && !registrationForm.controls.email.value" class="text-danger"><small>This Field is Required.</small></div> 
+          <div *ngIf="(registrationForm.controls.email.touched || registrationForm.controls.email.dirty) && registrationForm.controls.email.invalid" class="text-danger"><small>The email is invalid.</small></div> 
 
         </div>
         <div class="form-group col-md-6">
